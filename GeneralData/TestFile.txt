@@ -1,0 +1,2 @@
+Tarefa1 - [Tarefa1.2;Tarefa1.3] 24/10/2023 28/10/2023 a
+Tarefa2 Tarefa2.1 [Tarefa2.2;Tarefa2.3] 24/10/2023 28/10/2023
