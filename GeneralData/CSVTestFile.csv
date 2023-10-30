@@ -1,0 +1,4 @@
+Tarefa,Predecessor,Sucessor,Data de Inicio,Data de Término
+Tarefa1,-,Tarefa1.1;Tarefa1.2,24/09/2023,30/09/2023
+Tarefa2,-,Tarefa2.1;Tarefa3,27/09/2023,29/09/2023
+Tarefa3,Tarefa2,-,30/09/2023,05/10/2023
