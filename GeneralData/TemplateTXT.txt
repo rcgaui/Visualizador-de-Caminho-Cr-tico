@@ -1,0 +1,3 @@
+NomeTarefa Predecessor Sucessor DataDeInicio DataDeTermino
+TAREFA1 TAREFA0 [TAREFA1.1;TAREFA1.2] 29/10/2023 03/11/2023 
+TAREFA2 - - 29/10/2023 03/11/2023
