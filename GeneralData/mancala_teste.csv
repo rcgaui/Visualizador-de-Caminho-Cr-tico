@@ -1,0 +1,15 @@
+Tarefa,Codigo,Predecessor,Duracao
+Elaboração dos testes,A,,3
+realiza_jogada,B,A,3
+Testes e correções,C,AB,2
+valida_jogada,D,B,2
+captura_peca,E,B,3
+verifica_fim,F,B,1
+pega_todas_pecas,G,B,2
+Teste e implementação valida_jogada,H,D,2
+Teste e implementação captura_peca,I,E,3
+Teste e implementação verifica_fim,J,F,2
+Teste e implementação pega_todas_pecas,K,G,2
+atualiza_tabuleiro,L,HIJK,6
+Teste e implementação atualiza_tabuleiro,M,L,4
+Testes e correções finais,N,M,6

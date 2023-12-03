@@ -1,0 +1,28 @@
+Tarefa,Codigo,Predecessor,Duracao
+pesquisar e aprender a biblioteca TKinter,A,,3
+implementar janela grafica do menu do jogo,B,A,7
+teste unitario do menu,C,B,7
+implementar botões do menu,D,C,5
+teste unitario de botoes do menu,E,D,5
+implementar janela gráfica do tutorial,F,A,6
+teste unitario do tutorial,G,F,6
+"""implementar o botão de """"sair"""" do tutorial""",H,G,2
+"""teste unitario do botao """"sair""""""",I,H,2
+implementar a janela grafica da partida,J,A,7
+teste unitario da partida,K,J,7
+implementar os botões da partida,L,K,3
+teste unitario botoes da partida,M,L,3
+implementar exibição da senha escolhida em caso de derrota,N,M,5
+teste unitario da exibicao da senha em caso de derrota,O,N,5
+implementar janela gráfica de exibição de vitória,P,AO,3
+teste unitario pra exibicao de vitoria,Q,P,3
+pesquisar e definir uma biblioteca com propriedades de aleatorizar componentes,R,,2
+definir tamanho da senha gerada,S,R,2
+implementar geração da senha,T,RS,3
+teste unitario da geracao de senha,U,T,3
+implementar input do usuario e sua validacao,V,U,3
+teste unitario do input do usuario,W,V,3
+implementar verificação de senhas,X,W,2
+teste unitario verificacao de senhas,Y,X,2
+teste integrado do projeto,Z,EIQY,2
+executavel do projeto,a,Z,1
