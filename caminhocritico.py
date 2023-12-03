@@ -61,8 +61,6 @@ def caminhoDeVolta (dados):
                 else:
                     SUCESSOR[index] = dados['Codigo'][i]
 
-    #incorporate the column to the data frame:
-
     dados["Sucessor"] = SUCESSOR
 
     for i in range(numTarefas -1, -1, -1):
