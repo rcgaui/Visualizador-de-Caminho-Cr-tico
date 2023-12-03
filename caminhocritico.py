@@ -1,9 +1,11 @@
 import numpy as np
+from exibicao import *
+from leituradados import *
 
 def buscaTarefa (dados, tarefa):
     x = 0
     flag = 0
-    for i in dados['TAREFA']:
+    for i in dados['Tarefa']:
         if (i == tarefa):
             flag = 1
             break
@@ -16,19 +18,23 @@ def buscaTarefa (dados, tarefa):
 
 def caminhoDeIda (dados):
     numTarefas = dados.shape[0]
-    ES = np.zeros(numTarefas, dtype=np.int8)
-    EF = np.zeros(numTarefas, dtype=np.int8)
+    ES = [0] * numTarefas
+    EF = [0] * numTarefas
     temp = []
     for i in range(numTarefas):
-        if (dados['PREDECESSOR'][i] == None):
+        if (dados['Predecessor'][i] == None):
             ES[i] = 0
-            EF[i] = ES[i] + dados['DURACAO'][i]
+            EF[i] = ES[i] + dados['Duracao'][i]
         else:
-            for j in dados['PREDECESSOR'][i]:
+            for j in dados['Predecessor'][i]:
                 index = buscaTarefa(dados, j)
-                temp.append(EF[index])
-            ES[i] = max(temp)
-            EF[i] = ES[i] + dados['DURACAO'][i]
+                if(index != None):
+                    temp.append(EF[index])
+                else:
+                    temp.append(0)          
+            if(temp!=None):
+                ES[i] = max(temp)
+            EF[i] = ES[i] + dados['Duracao'][i]
         temp = []
     dados['ES'] = ES
     dados['EF'] = EF
@@ -37,19 +43,23 @@ def caminhoDeIda (dados):
 
 def caminhoDeVolta (dados):
     numTarefas = dados.shape[0]
-    LS = np.zeros(numTarefas, dtype=np.int8)
-    LF = np.zeros(numTarefas, dtype=np.int8)
+    LS = [0] * numTarefas
+    LF = [0] * numTarefas
     temp = []
     for i in range(numTarefas -1, -1, -1):
-        if (dados['SUCESSOR'][i] == None):
+        if (dados['Sucessor'][i] == None):
             LF[i] = np.max(dados['EF'])
-            LS[i] = LF[i] - dados['DURACAO'][i]
+            LS[i] = LF[i] - dados['Duracao'][i]
         else:
-            for j in dados['SUCESSOR'][i]:
+            for j in dados['Sucessor'][i]:
                 index = buscaTarefa(dados, j)
-                temp.append(LS[index])
-            LF[i] = min(temp)
-            LS[i] = LF[i] - dados['DURACAO'][i]
+                if(index!=None):
+                    temp.append(LS[index])
+                else:
+                    temp.append(0)
+            if(temp!=[]):
+                LF[i] = min(temp)     
+                LS[i] = LF[i] - dados['Duracao'][i]
             temp = []
     dados['LS'] = LS
     dados['LF'] = LF
@@ -61,7 +71,7 @@ def calculaFolga(dados):
     FOLGA = np.zeros(shape=numTarefas, dtype=np.int8)
     for i in range(numTarefas):
         FOLGA[i] = dados['LS'][i] - dados['ES'][i]
-    dados['FOLGA'] = FOLGA
+    dados['Folga'] = FOLGA
     return dados
 
 def calculaCPM(dados):
@@ -70,8 +80,9 @@ def calculaCPM(dados):
     dados = calculaFolga(dados)
     return dados
 
-def cpm(dados):
-    dados = calculaCPM(dados)
-    indexFolgaZero = np.where(dados['FOLGA'] == 0)[0]
-    tarefasCpm = np.array(dados['TAREFA'][indexFolgaZero], dtype=np.str_)
-    return tarefasCpm
+def cpm(arquivo):
+    df = LerArquivoCSV(arquivo)
+    dados = calculaCPM(df)
+    indexFolgaZero = np.where(dados['Folga'] == 0)[0]
+    tarefasCpm = np.array(dados['Tarefa'][indexFolgaZero], dtype=np.str_)
+    exibirCaminhoCritico(tarefasCpm)

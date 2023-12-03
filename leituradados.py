@@ -2,6 +2,7 @@ import os
 from exibicao import *
 import pandas as pd
 from datetime import datetime
+import numpy as np
 
 def LerArquivoCSV(nomeDoArquivo):
     dirPath = os.path.dirname(os.path.abspath(__file__))
@@ -13,7 +14,7 @@ def LerArquivoCSV(nomeDoArquivo):
 
     try:
         with open(filePath, "r") as file:
-            csvFile = pd.read_csv(file, header=0,usecols=["Tarefa", "Predecessor", "Sucessor", "Data de Inicio", "Data de Término"])
+            csvFile = pd.read_csv(file).replace({np.nan: None})
             csvFile = formata_df(csvFile)         
             file.close()
             return csvFile
@@ -61,6 +62,3 @@ def formata_df(dfTarefas): #recebe o arquivo lido com o pd.read_csv(nome)
     dfTarefas["Duracao"] = srDura
     return dfTarefas       
               
-
-
-LerArquivoCSV("CSVTestFile.csv")
