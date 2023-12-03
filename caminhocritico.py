@@ -69,3 +69,9 @@ def calculaCPM(dados):
     dados = caminhoDeVolta(dados)
     dados = calculaFolga(dados)
     return dados
+
+def cpm(dados):
+    dados = calculaCPM(dados)
+    indexFolgaZero = np.where(dados['FOLGA'] == 0)[0]
+    tarefasCpm = np.array(dados['TAREFA'][indexFolgaZero], dtype=np.str_)
+    return tarefasCpm

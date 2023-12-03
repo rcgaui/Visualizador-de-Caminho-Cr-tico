@@ -15,3 +15,5 @@ def erroNumeroLinhas(linhas):
 def exibirCaminhoCritico():
     data = ["Tarefa 1", "Tarefa 7", "Tarefa 8", "Tarefa 11"]
     ouf.showlist(data, style="box", title="Caminho Critico")
+
+exibirCaminhoCritico()

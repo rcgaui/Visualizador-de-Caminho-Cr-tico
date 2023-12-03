@@ -11,26 +11,27 @@ def LerArquivoCSV(nomeDoArquivo):
 
     pd.options.display.max_rows = 9999
 
-    
     try:
         with open(filePath, "r") as file:
             csvFile = pd.read_csv(file, header=0,usecols=["Tarefa", "Predecessor", "Sucessor", "Data de Inicio", "Data de Término"])
-            validaCSV(csvFile)
-            #chama func palma
+            csvFile = formata_df(csvFile)         
+            file.close()
+            return csvFile
     except FileNotFoundError:
         ErroCSVnotFound(NomeDoArquivo=nomeDoArquivo)
         return None
     
-    file.close()
 
 def validaCSV(Arquivo):
     contadorLinhas = 0
-    i = 0
+    i = 0 
+    j = 0
     matriz = Arquivo.shape
 
     if(matriz[1] != 5):
         raise Exception(erroNumeroLinhas(contadorLinhas))   
     while(i<matriz[0]):
+        arqloc = Arquivo.loc[i]
         dataInicio = Arquivo.loc[i].at["Data de Inicio"]
         dataFim = Arquivo.loc[i].at["Data de Término"]
 
@@ -39,8 +40,27 @@ def validaCSV(Arquivo):
                 
         i += 1
     
-            
+def formata_df(dfTarefas): #recebe o arquivo lido com o pd.read_csv(nome)
+    date_format = "%d/%m/%Y"
+
+    inicios = dfTarefas["Data de Inicio"]
+    fins = dfTarefas["Data de Término"]
+    srDura = pd.Series()
+
+
+    for i in range(0, len(dfTarefas["Tarefa"])):
+        dIn =  datetime.strptime(inicios[i], date_format).date()
+        dFim = datetime.strptime(fins[i], date_format).date()
+
+
+        srDura[i] = (dFim - dIn).days
+
+    dfTarefas.drop("Data de Inicio", axis = 1, inplace = True)
+    dfTarefas.drop("Data de Término", axis = 1, inplace = True)
+
+    dfTarefas["Duracao"] = srDura
+    return dfTarefas       
               
 
 
-#LerArquivoCSV("CSVTestFile.csv")
+LerArquivoCSV("CSVTestFile.csv")
