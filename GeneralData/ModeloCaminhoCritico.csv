@@ -1,15 +1,15 @@
 Tarefa,Codigo,Predecessor,Data de Inicio,Data de Término
 pesquisar e aprender a biblioteca TKinter,A,,24/10/2023,26/10/2023
-implementar janela grafica do menu do jogo,B,A,26/10/2023,1/11/2023
-teste unitario do menu,C,B,26/10/2023,1/11/2023
-implementar botões do menu,D,C,3/11/2023,7/11/2023
-teste unitario de botoes do menu,E,D,3/11/2023,7/11/2023
-implementar janela gráfica do tutorial,F,A,27/10/2023,1/11/2023
-teste unitario do tutorial,G,F,27/10/2023,1/11/2023
-"""implementar o botão de """"sair"""" do tutorial""",H,G,2/11/2023,3/11/2023
-"""teste unitario do botao """"sair""""""",I,H,2/11/2023,3/11/2023
-implementar a janela grafica da partida,J,A,9/11/2023,15/11/2023
-teste unitario da partida,K,J,9/11/2023,15/11/2023
+implementar janela grafica do menu do jogo,B,A,26/10/2023,01/11/2023
+teste unitario do menu,C,B,26/10/2023,01/11/2023
+implementar botões do menu,D,C,03/11/2023,07/11/2023
+teste unitario de botoes do menu,E,D,03/11/2023,07/11/2023
+implementar janela gráfica do tutorial,F,A,27/10/2023,01/11/2023
+teste unitario do tutorial,G,F,27/10/2023,01/11/2023
+"""implementar o botão de """"sair"""" do tutorial""",H,G,02/11/2023,03/11/2023
+"""teste unitario do botao """"sair""""""",I,H,02/11/2023,03/11/2023
+implementar a janela grafica da partida,J,A,09/11/2023,15/11/2023
+teste unitario da partida,K,J,09/11/2023,15/11/2023
 implementar os botões da partida,L,K,15/11/2023,17/11/2023
 teste unitario botoes da partida,M,L,15/11/2023,17/11/2023
 implementar exibição da senha escolhida em caso de derrota,N,M,17/11/2023,21/11/2023
@@ -22,7 +22,7 @@ implementar geração da senha,T,RS,26/11/2023,28/11/2023
 teste unitario da geracao de senha,U,T,26/11/2023,28/11/2023
 implementar input do usuario e sua validacao,V,U,28/11/2023,30/11/2023
 teste unitario do input do usuario,W,V,28/11/2023,30/11/2023
-implementar verificação de senhas,X,W,1/12/2023,2/12/2023
-teste unitario verificacao de senhas,Y,X,1/12/2023,2/12/2023
-teste integrado do projeto,Z,EIQY,2/12/2023,3/12/2023
-executavel do projeto,a,Z,3/12/2023,3/12/2023
+implementar verificação de senhas,X,W,01/12/2023,02/12/2023
+teste unitario verificacao de senhas,Y,X,01/12/2023,02/12/2023
+teste integrado do projeto,Z,EIQY,02/12/2023,03/12/2023
+executavel do projeto,a,Z,03/12/2023,03/12/2023

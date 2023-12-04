@@ -19,7 +19,7 @@ def LerArquivoCSV(nomeDoArquivo):
     try:
         with open(filePath, "r") as file:
             csvFile = pd.read_csv(filePath).replace({np.nan: None})
-            #validaCSV(csvFile)
+            validaCSV(csvFile)
             csvFile = formata_df(csvFile)         
             file.close()
             return csvFile
@@ -31,14 +31,12 @@ def LerArquivoCSV(nomeDoArquivo):
 def validaCSV(Arquivo):
     i = 0 
     matriz = Arquivo.shape
-    print(Arquivo)
-
     while(i<matriz[0]):
         dataInicio = Arquivo.loc[i].at["Data de Inicio"]
         dataFim = Arquivo.loc[i].at["Data de Término"]
 
         if dataInicio != datetime.strptime(dataInicio, "%d/%m/%Y").strftime('%d/%m/%Y') or dataFim != datetime.strptime(dataFim, "%d/%m/%Y").strftime('%d/%m/%Y'):
-            raise ValueError("As datas da linha " + i + " Estão no formato incorreto")
+            raise ValueError("As datas da linha " + str(i) + " Estão no formato incorreto")
                 
         i += 1
     

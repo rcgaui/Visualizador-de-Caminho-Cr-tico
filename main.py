@@ -10,7 +10,6 @@ iniciaPrompt()
 
 arquivo =  input("Qual o nome do arquivo? \n")
 while(arquivo):
-    
     cpm(arquivo)
 
     printSepara()
@@ -20,7 +19,3 @@ while(arquivo):
         break
     
     arquivo =  input("Qual o nome do arquivo? \n ")
-
-    
-
-
