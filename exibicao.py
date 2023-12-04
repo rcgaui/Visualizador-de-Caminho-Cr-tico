@@ -14,3 +14,13 @@ def erroFormatoArquivo(nomeDoArquivo):
 
 def exibirCaminhoCritico(data):
     ouf.showlist(data, style="box", title="Caminho Critico")
+
+def iniciaPrompt():
+    ouf.linetitle("                                                                                                                        ", style="double")
+    ouf.bigtitle("calculo caminho critico")
+    ouf.boxtitle("Bem vindo ao projeto de calculo de caminho critico, insira abaixo o nome do arquivo CSV junto com o tipo. Ex: Cronograma.csv", style="double")
+    
+def printSepara():
+    print("\n")
+    ouf.linetitle("                                                                                                                        ", style="double")
+    print("\n")
