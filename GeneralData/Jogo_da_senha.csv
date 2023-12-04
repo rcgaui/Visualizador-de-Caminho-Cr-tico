@@ -1,27 +1,28 @@
-pesquisar e aprender a biblioteca TKinter,-,implementar a janela grafica da partida;implementar janela grafica do menu do jogo;implementar janela gráfica do tutorial;implementar janela gráfica de exibição de vitória,24/10/2023,26/10/2023
-implementar janela grafica do menu do jogo,pesquisar e aprender a biblioteca TKinter,teste unitario do menu ,26/10/2023,1/11/2023
-teste unitario do menu ,implementar janela grafica do menu do jogo,implementar botões do menu,26/10/2023,1/11/2023
-implementar botões do menu,teste unitario do menu,teste unitario de botoes do menu,3/11/2023,7/11/2023
-teste unitario de botoes do menu,implementar botões do menu,-,3/11/2023,7/11/2023
-implementar janela gráfica do tutorial,pesquisar e aprender a biblioteca TKinter,teste unitario do tutorial,27/10/2023,1/11/2023
-teste unitario do tutorial,implementar janela gráfica do tutorial,"implementar o botão de ""sair"" do tutorial",27/10/2023,1/11/2023
-"implementar o botão de ""sair"" do tutorial",teste unitario do tutorial,"teste unitario do botao ""sair""",2/11/2023,3/11/2023
-"teste unitario do botao ""sair""","implementar o botão de ""sair"" do tutorial",-,2/11/2023,3/11/2023
-implementar a janela grafica da partida,pesquisar e aprender a biblioteca TKinter,teste unitario da partida,9/11/2023,15/11/2023
-teste unitario da partida,implementar a janela grafica da partida,implementar os botões da partida,9/11/2023,15/11/2023
-implementar os botões da partida,teste unitario da partida,teste unitario botoes da partida,15/11/2023,17/11/2023
-teste unitario botoes da partida,implementar os botões da partida,implementar exibição da senha escolhida em caso de derrota,15/11/2023,17/11/2023
-implementar exibição da senha escolhida em caso de derrota,teste unitario botoes da partida,teste unitario da exibicao da senha em caso de derrota ,17/11/2023,21/11/2023
-teste unitario da exibicao da senha em caso de derrota ,implementar exibição da senha escolhida em caso de derrota,implementar janela gráfica de exibição de vitória,17/11/2023,21/11/2023
-implementar janela gráfica de exibição de vitória,pesquisar e aprender a biblioteca TKinter;teste unitario da exibicao da senha em caso de derrota ,teste unitario pra exibicao de vitoria,21/11/2023,23/11/2023
-teste unitario pra exibicao de vitoria,implementar janela gráfica de exibição de vitória,-,21/11/2023,23/11/2023
-pesquisar e definir uma biblioteca com propriedades de aleatorizar componentes,-,definir tamanho da senha gerada;implementar geração da senha,24/11/2023,25/11/2023
-definir tamanho da senha gerada,pesquisar e definir uma biblioteca com propriedades de aleatorizar componentes,implementar geração da senha;teste unitario da geracao de senha,25/11/2023,26/11/2023
-implementar geração da senha,pesquisar e definir uma biblioteca com propriedades de aleatorizar componentes;definir tamanho da senha gerada,teste unitario da geracao de senha,26/11/2023,28/11/2023
-teste unitario da geracao de senha,implementar geração da senha,implementar input do usuario e sua validacao,26/11/2023,28/11/2023
-implementar input do usuario e sua validacao,teste unitario da geracao de senha,teste unitario do input do usuario,28/11/2023,30/11/2023
-teste unitario do input do usuario,implementar input do usuario e sua validacao,implementar verificação de senhas,28/11/2023,30/11/2023
-implementar verificação de senhas,teste unitario do input do usuario,teste unitario verificacao de senhas ,1/12/2023,2/12/2023
-teste unitario verificacao de senhas ,implementar verificação de senhas,-,1/12/2023,2/12/2023
-teste integrado do projeto,"teste unitario de botoes do menu;teste unitario do botao ""sair"";teste unitario pra exibicao de vitoria;teste unitario verificacao de senhas ",executavel do projeto,2/12/2023,3/12/2023
-executavel do projeto,teste integrado do projeto,-,3/12/2023,3/12/2023
+Tarefa,Codigo,Predecessor,Data de Inicio,Data de Término
+pesquisar e aprender a biblioteca TKinter,A,,24/10/2023,26/10/2023
+implementar janela grafica do menu do jogo,B,A,26/10/2023,01/11/2023
+teste unitario do menu,C,B,26/10/2023,01/11/2023
+implementar botões do menu,D,C,03/11/2023,07/11/2023
+teste unitario de botoes do menu,E,D,03/11/2023,07/11/2023
+implementar janela gráfica do tutorial,F,A,27/10/2023,01/11/2023
+teste unitario do tutorial,G,F,27/10/2023,01/11/2023
+"""implementar o botão de """"sair"""" do tutorial""",H,G,02/11/2023,03/11/2023
+"""teste unitario do botao """"sair""""""",I,H,02/11/2023,03/11/2023
+implementar a janela grafica da partida,J,A,09/11/2023,15/11/2023
+teste unitario da partida,K,J,09/11/2023,15/11/2023
+implementar os botões da partida,L,K,15/11/2023,17/11/2023
+teste unitario botoes da partida,M,L,15/11/2023,17/11/2023
+implementar exibição da senha escolhida em caso de derrota,N,M,17/11/2023,21/11/2023
+teste unitario da exibicao da senha em caso de derrota,O,N,17/11/2023,21/11/2023
+implementar janela gráfica de exibição de vitória,P,AO,21/11/2023,23/11/2023
+teste unitario pra exibicao de vitoria,Q,P,21/11/2023,23/11/2023
+pesquisar e definir uma biblioteca com propriedades de aleatorizar componentes,R,,24/11/2023,25/11/2023
+definir tamanho da senha gerada,S,R,25/11/2023,26/11/2023
+implementar geração da senha,T,RS,26/11/2023,28/11/2023
+teste unitario da geracao de senha,U,T,26/11/2023,28/11/2023
+implementar input do usuario e sua validacao,V,U,28/11/2023,30/11/2023
+teste unitario do input do usuario,W,V,28/11/2023,30/11/2023
+implementar verificação de senhas,X,W,01/12/2023,02/12/2023
+teste unitario verificacao de senhas,Y,X,01/12/2023,02/12/2023
+teste integrado do projeto,Z,EIQY,02/12/2023,03/12/2023
+executavel do projeto,a,Z,03/12/2023,03/12/2023

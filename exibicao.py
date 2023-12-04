@@ -12,6 +12,10 @@ def erroFormatoArquivo(nomeDoArquivo):
     errorMsg = "O tipo de arquivo  de " + nomeDoArquivo + " inserido não é do tipo csv"
     print(errorMsg)
 
+def erroNumTarefas(numTarefas):
+    errorMsg = str(numTarefas) + " é um número de tarefas insuficiente"
+    print(errorMsg)
+
 def exibirCaminhoCritico(data):
     ouf.showlist(data, style="box", title="Caminho Critico")
 

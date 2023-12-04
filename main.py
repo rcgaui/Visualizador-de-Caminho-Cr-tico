@@ -5,7 +5,6 @@ import outputformat as ouf
 import pandas as pd
 
 
-
 iniciaPrompt()
 
 arquivo =  input("Qual o nome do arquivo? \n")

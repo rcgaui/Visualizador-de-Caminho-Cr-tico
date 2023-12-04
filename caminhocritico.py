@@ -19,6 +19,9 @@ def buscaTarefa (dados, codigo):
 
 def caminhoDeIda (dados):
     numTarefas = dados.shape[0]
+    if (numTarefas == 0):
+        erroNumTarefas(numTarefas)
+        raise ValueError
     ES = np.zeros(numTarefas, dtype=np.int8)
     EF = np.zeros(numTarefas, dtype=np.int8)
     temp = []
@@ -89,8 +92,6 @@ def calculaFolga(dados):
         FOLGA[i] = dados['LS'][i] - dados['ES'][i]
     dados['FOLGA'] = FOLGA
 
-    dados = dados.reindex(columns = ['Tarefa', 'Codigo','Predecessor','Sucessor','Duracao','ES','EF','LS','LF','FOLGA'])
-
     return dados
 
 def calculaCPM(dados):
@@ -108,4 +109,3 @@ def cpm(nomeArquivo):
             adicionaElementoLista(tarefasCpm, row[dados.columns.get_loc('Tarefa')])
 
     exibirCaminhoCritico(tarefasCpm)
-

@@ -1,15 +1,15 @@
-Tarefa,Predecessor,Sucessor,Data de Inicio,Data de Término
-Elaboração dos testes,-,realiza_jogada,24/09/2023,26/09/2023
-realiza_jogada,Elaboração dos testes,Testes e correções,27/09/2023,29/09/2023
-Testes e correções,Elaboração dos testes;realiza_jogada,valida_jogada;captura_peca;verifica_fim;pega_todas_pecas,29/09/2023,30/09/2023
-valida_jogada,realiza_jogada,Teste e implementação valida_jogada,02/10/2023,03/10/2023
-captura_peca,realiza_jogada,Teste e implementação captura_peca,01/10/2023,03/10/2023
-verifica_fim,realiza_jogada,Teste e implementação verifica_fim,01/10/2023,01/10/2023
-pega_todas_pecas,realiza_jogada,Teste e implementação pega_todas_pecas,01/10/2023,02/10/2023
-Teste e implementação valida_jogada,valida_jogada,atualiza_tabuleiro,04/10/2023,05/10/2023
-Teste e implementação captura_peca,captura_peca,atualiza_tabuleiro,04/10/2023,06/10/2023
-Teste e implementação verifica_fim,verifica_fim,atualiza_tabuleiro,02/10/2023,03/10/2023
-Teste e implementação pega_todas_pecas,pega_todas_pecas,atualiza_tabuleiro,03/10/2023,04/10/2023
-atualiza_tabuleiro,Teste e implementação valida_jogada;Teste e implementação captura_peca;Teste e implementação verifica_fim;Teste e implementação pega_todas_pecas,Teste e implementação atualiza_tabuleiro,07/10/2023,12/10/2023
-Teste e implementação atualiza_tabuleiro,atualiza_tabuleiro,Testes e correções finais,13/10/2023,16/10/2023
-Testes e correções finais,Teste e implementação atualiza_tabuleiro,-,17/10/2023,22/10/2023
+Tarefa,Codigo,Predecessor,Data de Inicio,Data de Término
+Elaboração dos testes,A,,24/09/2023,26/09/2023
+realiza_jogada,B,A,27/09/2023,29/09/2023
+Testes e correções,C,AB,29/09/2023,30/09/2023
+valida_jogada,D,B,02/10/2023,03/10/2023
+captura_peca,E,B,01/10/2023,03/10/2023
+verifica_fim,F,B,01/10/2023,01/10/2023
+pega_todas_pecas,G,B,01/10/2023,02/10/2023
+Teste e implementação valida_jogada,H,D,04/10/2023,05/10/2023
+Teste e implementação captura_peca,I,E,04/10/2023,06/10/2023
+Teste e implementação verifica_fim,J,F,02/10/2023,03/10/2023
+Teste e implementação pega_todas_pecas,K,G,03/10/2023,04/10/2023
+atualiza_tabuleiro,L,HIJK,07/10/2023,12/10/2023
+Teste e implementação atualiza_tabuleiro,M,L,13/10/2023,16/10/2023
+Testes e correções finais,N,M,17/10/2023,22/10/2023

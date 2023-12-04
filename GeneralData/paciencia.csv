@@ -1,0 +1,16 @@
+Tarefa,Codigo,Predecessor,Data de Inicio,Data de Término
+cria_baralho(),A,,23/10/2023,25/10/2023
+embaralha carta(),B,A,25/10/2023,01/11/2023
+contaCartas(),C,A,25/10/2023,01/11/2023
+pegaCartas(),D,A,02/11/2023,07/11/2023
+mostraTabuleiro(),E,A,02/11/2023,06/11/2023
+colocaCarta(),F,AD,28/10/2023,02/11/2023
+clicaCarta(),G,ADF,28/10/2023,02/11/2023
+mostraQtdCartas(),H,AE,03/11/2023,04/11/2023
+consultaRegras(),I,,03/11/2023,04/11/2023
+mostraQtdCartas(),J,AEH,08/11/2023,15/11/2023
+clicaPilhaCompras(),K,AG,08/11/2023,15/11/2023
+colocaSequencia(),L,AD,14/11/2023,17/11/2023
+compraCarta(),M,AH,14/11/2023,17/11/2023
+Inicia_Jogo(),N,ABCDEFGHIJKLM,16/11/2023,21/11/2023
+Refatoração,O,ABCDEFGHIJKLMN,16/11/2023,21/11/2023
