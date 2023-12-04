@@ -5,6 +5,10 @@ from datetime import datetime
 import numpy as np
 
 def LerArquivoCSV(nomeDoArquivo):
+    if(nomeDoArquivo[-3:] != "csv"):
+        erroFormatoArquivo(nomeDoArquivo=nomeDoArquivo)
+        raise ValueError
+
     dirPath = os.path.dirname(os.path.abspath(__file__))
     folderPath = 'GeneralData'
     filePath = os.path.join(dirPath, folderPath)
@@ -14,30 +18,27 @@ def LerArquivoCSV(nomeDoArquivo):
 
     try:
         with open(filePath, "r") as file:
-            csvFile = pd.read_csv(file).replace({np.nan: None})
+            csvFile = pd.read_csv(filePath).replace({np.nan: None})
+            #validaCSV(csvFile)
             csvFile = formata_df(csvFile)         
             file.close()
             return csvFile
     except FileNotFoundError:
         ErroCSVnotFound(NomeDoArquivo=nomeDoArquivo)
-        return None
+        raise FileNotFoundError
     
 
 def validaCSV(Arquivo):
-    contadorLinhas = 0
     i = 0 
-    j = 0
     matriz = Arquivo.shape
+    print(Arquivo)
 
-    if(matriz[1] != 5):
-        raise Exception(erroNumeroLinhas(contadorLinhas))   
     while(i<matriz[0]):
-        arqloc = Arquivo.loc[i]
         dataInicio = Arquivo.loc[i].at["Data de Inicio"]
         dataFim = Arquivo.loc[i].at["Data de Término"]
 
         if dataInicio != datetime.strptime(dataInicio, "%d/%m/%Y").strftime('%d/%m/%Y') or dataFim != datetime.strptime(dataFim, "%d/%m/%Y").strftime('%d/%m/%Y'):
-                raise ValueError
+            raise ValueError("As datas da linha " + i + " Estão no formato incorreto")
                 
         i += 1
     

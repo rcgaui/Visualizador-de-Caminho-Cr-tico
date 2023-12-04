@@ -1,5 +1,7 @@
 import numpy as np
 from Lista_Generica import *
+from exibicao import *
+from leituradados import LerArquivoCSV
 
 def buscaTarefa (dados, codigo):
     x = 0
@@ -97,11 +99,13 @@ def calculaCPM(dados):
     dados = calculaFolga(dados)
     return dados
 
-def cpm(dados):
-    dados = calculaCPM(dados)
+def cpm(nomeArquivo):
+    dataFrame = LerArquivoCSV(nomeArquivo)
+    dados = calculaCPM(dataFrame)
     tarefasCpm = []
     for row in dados.itertuples(index=False, name=None):
         if row[dados.columns.get_loc('FOLGA')] == 0:
             adicionaElementoLista(tarefasCpm, row[dados.columns.get_loc('Tarefa')])
 
-    return tarefasCpm
+    exibirCaminhoCritico(tarefasCpm)
+
